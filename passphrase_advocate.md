@@ -1,99 +1,51 @@
-## Why should I use a random passphrase?
+## Waarom zou ik een willekeurige wachtwoordzin gebruiken?
 
-Because humans are terrible at creating secure passwords. The [famous xkcd comic][1] got it right: humans have been trained to use <b>hard-to-remember</b> passwords that are <b>easy</b> for computers to guess.
+Omdat mensen slecht zijn in het bedenken van veilige wachtwoorden. Mensen zijn getraind om <b>moeilijk te onthouden</b> wachtwoorden te gebruiken die <b>gemakkelijk</b> door computers te raden zijn.
 
-[1]: http://xkcd.com/936/
+Hoe we het ook proberen, uiteindelijk gebruiken mensen meestal een van de weinige voorspelbare patronen bij het maken van wachtwoorden. We baseren ze op dingen die we ons kunnen herinneren, zoals namen, locaties, datums of gewoon gewone Engelse woorden. Vervolgens voegen we wat pit toe met een hoofdletter, enkele cijfers of een symbool.
 
-Try as we might, humans usually end up using one of a few predictable patterns when creating passwords. We base them on things we can remember, such as names, locations, dates or just common English words. Then, we add some spice with a capital letter, some numbers, or a symbol.
+Valt uw wachtwoord in deze groep?
 
-Does your password fall into this group?
+| Slechte wachtwoordpatronen | Is het gedenkwaardig? | Tijd om te kraken |
+| ------------ |---------------| ------|
+| Een gewoon woord (bijvoorbeeld: `december`)| Ja. | 18 milliseconden <small>(Serieus. Probeer het in het vak bovenaan.)</small> |
+| Een gemakkelijk te typen ruimtelijk woord (bijvoorbeeld: `qwerty` of `aaaaaaaa`)| Heel erg. | 10 milliseconden |
+| De gezinshond (bijvoorbeeld: `fikkie`) | Ja. | 58 seconden |
+| Een belangrijk nummer, zoals een datum of postcode (bijvoorbeeld: `03261981`)| Het is zeker onvergetelijk voor jou. | 2.213 seconden |
+| Een woord met triviale letter → cijfervervangingen (bijvoorbeeld: `Br3d4`)| Een beetje gedenkwaardig, maar je vergeet misschien welke letters in de plaats komen van cijfers.| 4 seconden|
 
-| Bad Password Patterns | Is It Memorable?  | Time To Crack  |
-| ------------- |---------------| ------|
-| A common word (example: `december`)| Yes. | 18 milliseconds <small>(Seriously. Try it in the box at the top.)</small> |
-| An easily-typed spatial word (example: `qwerty` or `aaaaaaaa`)| Very much so. | 10 milliseconds |
-| The family dog (example: `rusty`) | Yep. | 27 milliseconds |
-| An important number, such as a date or zip code (example: `03261981`)| It's memorable to you, certainly. | 2.213 seconds |
-| A word with trivial letter→number substitutions (example: `S4nfr4n`)| Sort of memorable, but you may forget which letters are substituted for numbers.| 639 milliseconds|
+Als uw wachtwoord op een van deze voorbeelden lijkt, is het _onmiddellijk te kraken._ Zelfs een combinatie van deze patronen, zoals `[algemeen woord]+[getal]` zal eenvoudig te kraken zijn.
 
-If your password resembles any of these examples, it is _instantly crackable._ Even a mix of these patterns, such as `[common word]+[number]` will be straightforward to crack.
+Vergelijk deze met een wachtwoordzin:
 
-Compare those to a passphrase:
+| Wachtwoordpatroon | Is het gedenkwaardig? | Tijd om te kraken |
+| ------------ |---------------| ------|
+| Vier of meer willekeurig gekozen woorden (bijvoorbeeld: 'fusie meeuw label manager') | Als u het een paar keer typt, wordt het in het geheugen opgeslagen. | **22.518.085.015 eeuwen.** Geven of nemen. |
 
-| Password Pattern | Is It Memorable?  | Time To Crack  |
-| ------------- |---------------| ------|
-| Four or more randomly chosen words (example: `mergers decade labeled manager`) | Type it a few times, and you'll have it committed to memory. | **6,000,126 centuries.** Give or take. |
+## Is het echt zo gemakkelijk om een wachtwoord te kraken? Hoe wordt het precies gedaan?
 
+De methode voor kraken ziet er meestal ongeveer zo uit:
 
-## Is it really that easy to crack a password? How is it done, exactly?
+1. Eerst beginnen de hackers met een aantal woordenlijsten. De top 10.000 wachtwoorden is een goed beginpunt. Ook lijsten met alle Engelse woorden, alle namen, datums, enzovoort. In minder dan één seconde zal 30% van alle wachtwoorden worden gekraakt.
+2. Nadat ze deze woordenlijsten hebben uitgeput, zullen ze alle woorden opnieuw proberen met gebruikelijke vervangingen: de eerste letter met een hoofdletter schrijven (`december` → `December`), gewone letter-voor-cijfer-wissels maken (`december` → `d3cemb3r`) en andere veel voorkomende wachtwoordvariaties.
+3. Vervolgens beginnen ze de voorgaande woordenlijsten te combineren. Naam + datum (`doug3251983`). Naam + [scheidingsteken] + datum (`doug.3251983`).
+4. Als al het andere niet lukt: brute kracht, oftewel probeer elke combinatie van karakters. Probeer `a`, dan `b`, dan `c` ... uiteindelijk `aa`, `ab`, `ac` ... uiteindelijk `6j2b#hi8`, `6j2b#hi9`, `6j2b#hi0` , enzovoort.
 
-The method for cracking usually looks something like this:
+Als uw wachtwoord is gebaseerd op een bepaald patroon, met behulp van een combinatie van de bovenstaande stappen, zal het uiteindelijk worden gekraakt. Afhankelijk van hoe goed een website uw wachtwoord beschermt, kunnen moderne computers tussen de 10.000 en 350 miljard keer raden per seconde.
 
-1. First, the hackers start with a bunch of wordlists. The [top 10,000 passwords][pwd] is a good place to start. Also, lists of all English words, all names, dates, and so on. In less than one second, [30% of all passwords will be cracked](https://xato.net/passwords/more-top-worst-passwords/).
-2. After exhausting those wordlists, they will try all of the words again with common substitutions: capitalizing the first letter (`december` → `December`), making common letter-for-number swaps (`december` → `d3cemb3r`), and other common password variations.
-3. Next, they start combining the previous wordlists. Name + date (`doug3251983`). Name + [separator] + date (`doug.3251983`).
-4. If all else fails: brute force, a.k.a. try every combination of characters. Try `a`, then `b`, then `c` ... eventually `aa`, `ab`, `ac` ... eventually `6j2b#hi8`, `6j2b#hi9`, `6j2b#hi0`, et cetera.
+Je beste verdediging is het gebruik van een werkelijk willekeurige wachtwoordgenerator (zoals deze site).
 
-If your password is based on any kind of pattern, using some combination of the above steps, it will eventually be cracked. Depending on how well-protected a website keeps your password, modern computers can make somewhere between 10,000 and [350 billion guesses](http://arstechnica.com/security/2012/12/25-gpu-cluster-cracks-every-standard-windows-password-in-6-hours/) per second.
+## Ik snap het, eenvoudige wachtwoorden zijn gemakkelijk te kraken. Maar waarom zou ik een willekeurige wachtwoord*zin* gebruiken in plaats van bijvoorbeeld `ipz2!az8k%0h`?
 
-Your best defense is using a truly random password generator (like this site).
+Er zijn tientallen willekeurige wachtwoordgeneratoren die met plezier een aantal willekeurige tekens samenstellen die je als wachtwoord kunt gebruiken. Deze willekeurige wachtwoorden zijn veilig, maar het is enorm lastig om ze te onthouden.
 
-[pwd]: https://xato.net/passwords/more-top-worst-passwords/
-[guesses]: http://arstechnica.com/security/2012/12/25-gpu-cluster-cracks-every-standard-windows-password-in-6-hours/
+Willekeurige wachtwoordzinnen bieden de beste combinatie van **<u>gedenkwaardigheid</u>** en **<u>beveiliging</u>**.
 
-## I get it, simple passwords are cracked easily. But why should I use a random pass*phrase* instead of, say, `ipz2!az8k%0h`?
+Bij wijze van voorbeeld zijn hier twee wachtwoorden met vergelijkbare kraakbaarheid:
 
-There are dozens of random password generators out there that will happily put together a bunch of random characters for you to use as a password. These random passwords are secure, but they're a huge pain to actually remember.
-
-Random passphrases provide the best combination of **<u>memorability</u>** and **<u>security</u>**.
-
-By way of example, here are two passwords with similar crackability:
-
-|Password|Time to crack|
+|Wachtwoord|Tijd om te kraken|
 |--------|-------------|
-|`p%9y#k&yFm?`| Approximately 90,182,663 centuries|
-|`logic finite eager ratio`|Approximately 189,658,722 centuries|
+|`p%9y#k&yFm?`| Ongeveer 90.182.663 eeuwen|
+|`logische eindige gretige verhouding`|Ongeveer 4.506.443.092.311.677e+29 eeuwen|
 
-Which would you rather remember?
-
-## Fine, you've convinced me. I'll use a passphrase. What else can I do to increase my security?
-
-The recipe for perfect password management is straightforward.
-
-### 1. Use a password manager.
-
-Firefox, Chrome, Safari and Internet Explorer all have built in password managers. But if you plan to use your passwords across devices, you probably should use one of these:
-
-* [**1 Password**][1p] (Windows, Mac, iOS, Android)
-* [**LastPass**][lp] (iOS, Android; Chrome plugin works on Windows, Mac, Linux)
-* [**KeePass**][kp] (Linux, Windows, Mac, Android)
-
-[1p]: https://agilebits.com/onepassword
-[lp]: https://lastpass.com/
-[kp]: http://keepass.info/
-
-### 2. Use a strong <u>master password</u> for your password manager.
-
-This is when a passphrase would be especially useful.
-
-### 3. Use a different passphrase for every site.
-
-<span style="color: #000;">belief romanian bridge profit</span>  
-<span style="color: #333;">arts started bundle disease</span>  
-<span style="color: #666;">delay gradual asset centers</span>  
-<span style="color: #999;">keating post warburg johnson</span>  
-<span style="color: #AAA;">efforts denying billed buy</span>  
-<span style="color: #CCC;">whose category fonts mutual</span>  
-<span style="color: #EEE;">easing autonomy weight five</span>
-
-And so on.
-
-## Should I really be getting my password from a website?
-
-Honestly? Probably not. But in this page's defense, it makes **zero** external calls (no images, no javascript). Check your browser's network tab to verify. The passwords are all created by code contained in this page, and they are never stored.
-
-For extra security, this page is designed to run entirely offline: <a href="/generate_passphrase.html" download>save</a> this page to your hard drive, disconnect from the internet, and open it in a browser. This way you can assure that the passwords are not being transmitted anywhere.
-
-And for the truly paranoid, I recommend something called [diceware](http://world.std.com/~reinhold/diceware.html), which is a completely offline, non-computer based method of creating passphrases. It involves six dice, and a printed wordlist. The author also recommends you close your blinds while doing it.
-
-## Thanks for reading, and stay secure!
+Welke zou je liever onthouden?

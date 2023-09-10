@@ -57,11 +57,11 @@ button {
   transition: all 0.2s ease;
 }
 button:hover {
-  background-color: #5dfa7b;
+  background-color: #164272;
   color: white;
 }
 button:active {
-  background-color: #48c260;
+  background-color: #164272;
 }
 p {
   margin: 20px 0;
@@ -91,8 +91,14 @@ li {
 }
 .header {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 0px;
+  
 }
+
+.header img{
+  margin-left: 280px;
+}
+
 .passphrase-label {
   margin: 0 auto 3px auto;
   font-size: 75%;

@@ -15,7 +15,7 @@ function generatePassword(numberOfWords) {
 
   // Grab a random word, push it to the password array
   for (var i = 0; i < numberOfWords; i++) {
-      var index = Math.floor(randomNumberBetweenZeroAndOne() * 7776)
+      var index = Math.floor(randomNumberBetweenZeroAndOne() * 36389)
       generatedPasswordArray.push(wordlist[index]);
   }
 
@@ -42,22 +42,22 @@ function convertSecondsToReadable(seconds) {
   var numCenturies   = Math.floor(numSeconds / (60 * 60 * 24 * 365 * 100));
 
   if (numMilliseconds < 1000) {
-    timeString = numMilliseconds + ' milliseconds';
+    timeString = numMilliseconds + ' milliseconden';
   } else if (numSeconds < 60) {
-    timeString = numSeconds + ' seconds';
+    timeString = numSeconds + ' seconden';
   } else if (numMinutes < 60) {
-    timeString = numMinutes + ' minutes';
+    timeString = numMinutes + ' minuten';
   } else if (numHours < 24) {
-    timeString = numHours + ' hours';
+    timeString = numHours + ' uren';
   } else if (numDays < 365) {
-    timeString = numDays + ' days';
+    timeString = numDays + ' dagen';
   } else if (numYears < 100) {
-    timeString = numYears + ' years';
+    timeString = numYears + ' jaren';
   } else {
-    timeString = numCenturies + ' centuries';
+    timeString = numCenturies + ' eeuwen';
   }
 
-  return timeString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',');
+  return timeString.toString().replace(/\B(?=(\d{3})+(?!\d))/g, '.');
 }
 
 function calculateAndSetCrackTime() {
